@@ -6,24 +6,35 @@
 }
 
 
-#title-header{
-  display: flex;
-  justify-content: left;
-  align-items: center;
+#title-header,
+#directions,
+#score{
   padding: 15px;
   font-family: "Press Start 2P", 'Times New Roman', Times, serif;
   font-weight: 400;
   font-style: normal;
+  
+}
+
+#title-header{
   font-size: 2rem;
+}
+
+#directions{
+  font-size: 1rem;
+}
+
+#score{
+  font-size: 0.75rem;
 }
 
 
 #card-grid{
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 100px;
   padding: 100px;
+  padding-top: 0;
   
 }
 

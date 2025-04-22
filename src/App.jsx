@@ -1,7 +1,9 @@
 import './styles/App.css'
 import { Header } from './components/header'
+import { Directions } from './components/directions'
 import {Card} from './components/card'
 import { useEffect, useState } from 'react'
+import { Score } from './components/score'
 
 const URL = 'https://pokeapi.co/api/v2/pokemon/';
 
@@ -68,12 +70,28 @@ function App() {
     return () => ignore = true;
   }, []);
 
+  function handleCardOnClick(){
+    const newData = [...data];
+    
+    for(let i = 0; i < newData.length; i++){
+      let randNum = Math.floor(Math.random() * newData.length);
+      const temp = newData[i];
+      newData[i] = newData[randNum];
+      newData[randNum] = temp;
+    }
+
+    setData(newData);
+
+  }
+
 
   return (
     <>
       <Header />
+      <Directions />
+      <Score curScore={0} highScore={0} />
       <div id="card-grid">
-        {!isLoading && data.map(dataObj => <Card key={dataObj.name} dataObj={dataObj}/>)}
+        {!isLoading && data.map(dataObj => <Card key={dataObj.name} dataObj={dataObj} onClick={handleCardOnClick}/>)}
       </div>
       
     </>
