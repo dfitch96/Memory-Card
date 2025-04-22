@@ -5,7 +5,7 @@ A simple memory game built with React and the Pokémon API.
 Click on a Pokémon card to earn points—but don't click the same one twice!
 Cards shuffle each time you click. Try to beat your best score!
 
-## Installation
+## 💾 Installation
 1. Clone the repository:
    ```bash
    git@github.com:dfitch96/Memory-Card.git
@@ -19,5 +19,4 @@ Cards shuffle each time you click. Try to beat your best score!
    ```bash
    npm run dev
 
- ## Live Demo
-[Play Here](https://odinproject-pokemon-memory-card.netlify.app/)
+## [Play Here](https://odinproject-pokemon-memory-card.netlify.app/)
