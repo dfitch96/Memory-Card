@@ -8,7 +8,7 @@ Cards shuffle each time you click. Try to beat your best score!
 ## 💾 Installation
 1. Clone the repository:
    ```bash
-   git@github.com:dfitch96/Memory-Card.git
+   git clone git@github.com:dfitch96/Memory-Card.git
 2. Navigate to project directory
    ```bash
    cd Memory-Card
