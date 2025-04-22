@@ -11,6 +11,14 @@ const pokemons = [
   "eevee",
   "lucario",
   "mewtwo",
+  "greninja",
+  "gengar",
+  "snorlax",
+  "gardevoir",
+  "umbreon",
+  "sylveon",
+  "arcanine",
+  
 
 ]
 
@@ -64,7 +72,10 @@ function App() {
   return (
     <>
       <Header />
-      {!isLoading && data.map(dataObj => <Card key={dataObj.name} dataObj={dataObj}/>)}
+      <div id="card-grid">
+        {!isLoading && data.map(dataObj => <Card key={dataObj.name} dataObj={dataObj}/>)}
+      </div>
+      
     </>
   )
 }
